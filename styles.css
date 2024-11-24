@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    background-color: #4CAF50;
+    margin: 0;
+    color: white;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#empleos {
+    margin: 20px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#empleos div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#empleos h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#empleos a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+#empleos p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Pagination buttons */
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+button:enabled {
+    background-color: #4CAF50;
+}
+
+button:enabled:hover {
+    background-color: #45a049;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    #empleos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #empleos {
+        grid-template-columns: 1fr;
+    }
+}

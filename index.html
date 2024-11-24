@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleos IT en España</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Empleos IT en España</h1>
+    
+    <!-- Selector para elegir la ciudad -->
+    <label for="ciudad">Selecciona una ciudad:</label>
+    <select id="ciudad">
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+        <option value="valencia">Valencia</option>
+        <!-- Agrega más ciudades aquí -->
+    </select>
+
+    <!-- Selector para elegir las tecnologías -->
+    <label for="technologies">Selecciona las tecnologías:</label>
+    <select id="technologies" multiple>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="javascript">JavaScript</option>
+        <option value="fullstack">Fullstack</option>
+        <option value="backend">Backend</option>
+        <option value="frontend">Frontend</option>
+    </select>
+    
+    <button onclick="obtenerEmpleos()">Obtener Ofertas</button>
+    <div id="empleos"></div>
+    <button onclick="cambiarPagina(-1)" id="prevPage" disabled>Anterior</button>
+    <button onclick="cambiarPagina(1)" id="nextPage" disabled>Siguiente</button>
+
+    <script>
+        let currentPage = 1; // Página actual
+
+        function obtenerEmpleos() {
+            const ciudad = document.getElementById('ciudad').value;
+            const selectedTechnologies = Array.from(document.getElementById('technologies').selectedOptions).map(option => option.value).join(',');
+            const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${selectedTechnologies}&where=${ciudad}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const empleos = data.results;
+                    const listaEmpleos = document.getElementById('empleos');
+                    listaEmpleos.innerHTML = ''; // Limpiar el div antes de mostrar nuevos resultados
+                    empleos.forEach(empleo => {
+                        const oferta = document.createElement('div');
+                        oferta.innerHTML = `
+                            <h3><a href="${empleo.redirect_url}" target="_blank">${empleo.title}</a></h3>
+                            <p>Empresa: ${empleo.company.display_name || 'No disponible'}</p>
+                            <p>Ciudad: ${empleo.location.display_name || 'No disponible'}</p>
+                            <p>Fecha de publicación: ${new Date(empleo.created).toLocaleDateString()}</p>
+                            <hr>
+                        `;
+                        listaEmpleos.appendChild(oferta);
+                    });
+
+                    // Habilitar/deshabilitar los botones de paginación
+                    document.getElementById('prevPage').disabled = currentPage <= 1;
+                    document.getElementById('nextPage').disabled = data.results.length === 0;
+
+                })
+                .catch(error => {
+                    console.error('Error al obtener los empleos:', error);
+                });
+        }
+
+        function cambiarPagina(increment) {
+            currentPage += increment;
+            obtenerEmpleos();
+        }
+
+        // Inicializar con la primera página
+        obtenerEmpleos();
+    </script>
+</body>
+</html>
