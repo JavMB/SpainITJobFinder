@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Estilos globales */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
@@ -9,18 +9,75 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
-    padding: 20px;
-    background-color: #4CAF50;
-    margin: 0;
     color: white;
+    background-color: #4CAF50;
+    padding: 20px;
+    margin: 0;
 }
 
+/* Estilo para los labels */
 label {
     font-size: 1.2em;
     margin-right: 10px;
 }
 
+/* Estilos para el select personalizado */
+.custom-select {
+    position: relative;
+    width: 100%;
+    margin: 10px 0; /* Asegura que el select tenga espacio a los lados */
+}
+
+.select-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+
+.select-box .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #4CAF50;
+}
+
+.options-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10;
+}
+
+.options-container.visible {
+    display: block;
+}
+
+.options-container label {
+    display: block;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.options-container input {
+    margin-right: 10px;
+}
+
+/* Estilo para los botones */
 button {
     background-color: #4CAF50;
     color: white;
@@ -37,6 +94,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Estilo para los empleos */
 #empleos {
     margin: 20px auto;
     width: 80%;
@@ -68,7 +126,7 @@ button:hover {
     color: #777;
 }
 
-/* Pagination buttons */
+/* Botones de paginación */
 button:disabled {
     background-color: #ddd;
     cursor: not-allowed;
@@ -82,20 +140,32 @@ button:enabled:hover {
     background-color: #45a049;
 }
 
-/* Mobile responsive */
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    #empleos {
+        grid-template-columns: 1fr 1fr; /* 2 columnas */
+    }
+}
+
 @media screen and (max-width: 768px) {
     #empleos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    /* Ajustar los select boxes y los botones para que sean más cómodos */
+    .custom-select {
+        width: 100%; /* Asegura que el select ocupe el 100% del ancho disponible */
     }
 
     button {
-        width: 100%;
+        width: 100%; /* Hacer los botones más grandes */
         margin: 5px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
+    /* Si es necesario, se pueden agregar más ajustes */
     #empleos {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
     }
 }
