@@ -9,48 +9,46 @@
 <body>
     <h1>Empleos IT en España</h1>
     
-    <!-- Selector para elegir la ciudad -->
-<label for="ciudad">Selecciona una ciudad:</label>
-<select id="ciudad">
-    <option value="madrid">Madrid</option>
-    <option value="barcelona">Barcelona</option>
-    <option value="valencia">Valencia</option>
-    <option value="sevilla">Sevilla</option>
-    <option value="zaragoza">Zaragoza</option>
-    <option value="malaga">Málaga</option>
-    <option value="murcia">Murcia</option>
-    <option value="palma">Palma de Mallorca</option>
-    <option value="las-palmas">Las Palmas de Gran Canaria</option>
-    <option value="bilbao">Bilbao</option>
-    <option value="alicante">Alicante</option>
-    <option value="cordoba">Córdoba</option>
-    <option value="vigo">Vigo</option>
-    <option value="valladolid">Valladolid</option>
-    <option value="a-coruna">A Coruña</option>
-    <option value="granada">Granada</option>
-    <option value="oviedo">Oviedo</option>
-    <option value="santander">Santander</option>
-    <option value="toledo">Toledo</option>
-    <option value="girona">Girona</option>
-    <option value="logrono">Logroño</option>
-    <option value="caceres">Cáceres</option>
-    <option value="leon">León</option>
-    <option value="castellon">Castellón de la Plana</option>
-    <option value="salamanca">Salamanca</option>
-    <option value="albacete">Albacete</option>
-    <option value="pontevedra">Pontevedra</option>
-    <option value="huelva">Huelva</option>
-    <option value="badajoz">Badajoz</option>
-    <option value="jerez">Jerez de la Frontera</option>
-    <option value="segovia">Segovia</option>
-    <option value="burgos">Burgos</option>
-    <option value="cuenca">Cuenca</option>
-    <option value="teruel">Teruel</option>
-</select>
+    <!-- Selección de ciudad -->
+    <label for="ciudad">Selecciona una ciudad:</label>
+    <select id="ciudad">
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+        <option value="valencia">Valencia</option>
+        <option value="sevilla">Sevilla</option>
+        <option value="zaragoza">Zaragoza</option>
+        <option value="malaga">Málaga</option>
+        <option value="murcia">Murcia</option>
+        <option value="palma">Palma de Mallorca</option>
+        <option value="las-palmas">Las Palmas de Gran Canaria</option>
+        <option value="bilbao">Bilbao</option>
+        <option value="alicante">Alicante</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="vigo">Vigo</option>
+        <option value="valladolid">Valladolid</option>
+        <option value="a-coruna">A Coruña</option>
+        <option value="granada">Granada</option>
+        <option value="oviedo">Oviedo</option>
+        <option value="santander">Santander</option>
+        <option value="toledo">Toledo</option>
+        <option value="girona">Girona</option>
+        <option value="logrono">Logroño</option>
+        <option value="caceres">Cáceres</option>
+        <option value="leon">León</option>
+        <option value="castellon">Castellón de la Plana</option>
+        <option value="salamanca">Salamanca</option>
+        <option value="albacete">Albacete</option>
+        <option value="pontevedra">Pontevedra</option>
+        <option value="huelva">Huelva</option>
+        <option value="badajoz">Badajoz</option>
+        <option value="jerez">Jerez de la Frontera</option>
+        <option value="segovia">Segovia</option>
+        <option value="burgos">Burgos</option>
+        <option value="cuenca">Cuenca</option>
+        <option value="teruel">Teruel</option>
+    </select>
 
-    
-
-    <!-- Selector para elegir las tecnologías -->
+    <!-- Selección de tecnologías -->
     <label for="technologies">Selecciona las tecnologías:</label>
     <div class="custom-select">
         <div class="select-box">
@@ -59,102 +57,48 @@
         </div>
         <div id="options-container" class="options-container">
             <label><input type="checkbox" value="python"> Python</label>
-    <label><input type="checkbox" value="java"> Java</label>
-    <label><input type="checkbox" value="javascript"> JavaScript</label>
-    <label><input type="checkbox" value="fullstack"> Fullstack</label>
-    <label><input type="checkbox" value="backend"> Backend</label>
-    <label><input type="checkbox" value="frontend"> Frontend</label>
-    <label><input type="checkbox" value="csharp"> C#</label>
-    <label><input type="checkbox" value="php"> PHP</label>
-    <label><input type="checkbox" value="ruby"> Ruby</label>
-    <label><input type="checkbox" value="go"> Go</label>
-    <label><input type="checkbox" value="swift"> Swift</label>
-    <label><input type="checkbox" value="kotlin"> Kotlin</label>
-    <label><input type="checkbox" value="typescript"> TypeScript</label>
-    <label><input type="checkbox" value="rust"> Rust</label>
-    <label><input type="checkbox" value="scala"> Scala</label>
-    <label><input type="checkbox" value="nodejs"> Node.js</label>
-    <label><input type="checkbox" value="react"> React</label>
-    <label><input type="checkbox" value="angular"> Angular</label>
-    <label><input type="checkbox" value="vuejs"> Vue.js</label>
-    <label><input type="checkbox" value="docker"> Docker</label>
-    <label><input type="checkbox" value="aws"> AWS</label>
-    <label><input type="checkbox" value="azure"> Azure</label>
-    <label><input type="checkbox" value="googlecloud"> Google Cloud</label>
-    <label><input type="checkbox" value="devops"> DevOps</label>
+            <label><input type="checkbox" value="java"> Java</label>
+            <label><input type="checkbox" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" value="fullstack"> Fullstack</label>
+            <label><input type="checkbox" value="backend"> Backend</label>
+            <label><input type="checkbox" value="frontend"> Frontend</label>
+            <label><input type="checkbox" value="csharp"> C#</label>
+            <label><input type="checkbox" value="php"> PHP</label>
+            <label><input type="checkbox" value="ruby"> Ruby</label>
+            <label><input type="checkbox" value="go"> Go</label>
+            <label><input type="checkbox" value="swift"> Swift</label>
+            <label><input type="checkbox" value="kotlin"> Kotlin</label>
+            <label><input type="checkbox" value="typescript"> TypeScript</label>
+            <label><input type="checkbox" value="rust"> Rust</label>
+            <label><input type="checkbox" value="scala"> Scala</label>
+            <label><input type="checkbox" value="nodejs"> Node.js</label>
+            <label><input type="checkbox" value="react"> React</label>
+            <label><input type="checkbox" value="angular"> Angular</label>
+            <label><input type="checkbox" value="vuejs"> Vue.js</label>
+            <label><input type="checkbox" value="docker"> Docker</label>
+            <label><input type="checkbox" value="aws"> AWS</label>
+            <label><input type="checkbox" value="azure"> Azure</label>
+            <label><input type="checkbox" value="googlecloud"> Google Cloud</label>
+            <label><input type="checkbox" value="devops"> DevOps</label>
         </div>
     </div>
 
+    <!-- Selección resumida -->
+    <div id="mostrarselects" class="hidden">
+        <p><strong>Ciudad seleccionada:</strong> <span id="ciudad-seleccionada">Ninguna</span></p>
+        <p><strong>Tecnologías seleccionadas:</strong> <span id="tecnologias-seleccionadas">Ninguna</span></p>
+    </div>
+
+    <!-- Botones y contenedor de empleos -->
     <button onclick="obtenerEmpleos()">Obtener Ofertas</button>
     <div id="empleos"></div>
     <button onclick="cambiarPagina(-1)" id="prevPage" disabled>Anterior</button>
     <button onclick="cambiarPagina(1)" id="nextPage" disabled>Siguiente</button>
 
-    <script>
-        let currentPage = 1;
-
-        // Función para mostrar las tecnologías seleccionadas
-        function actualizarSeleccion() {
-            const selectedTechnologies = Array.from(document.querySelectorAll('#options-container input:checked'))
-                                              .map(input => input.value);
-            document.getElementById('selected-technologies').textContent = selectedTechnologies.length > 0
-                ? selectedTechnologies.join(', ')
-                : 'Selecciona las tecnologías';
-        }
-
-        // Función para obtener los empleos
-        function obtenerEmpleos() {
-            const ciudad = document.getElementById('ciudad').value;
-            const selectedTechnologies = Array.from(document.querySelectorAll('#options-container input:checked'))
-                                              .map(input => input.value)
-                                              .join(',');
-            const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${selectedTechnologies}&where=${ciudad}`;
-            
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const empleos = data.results;
-                    const listaEmpleos = document.getElementById('empleos');
-                    listaEmpleos.innerHTML = '';
-                    empleos.forEach(empleo => {
-                        const oferta = document.createElement('div');
-                        oferta.innerHTML = `
-                            <h3><a href="${empleo.redirect_url}" target="_blank">${empleo.title}</a></h3>
-                            <p>Empresa: ${empleo.company.display_name || 'No disponible'}</p>
-                            <p>Ciudad: ${empleo.location.display_name || 'No disponible'}</p>
-                            <p>Fecha de publicación: ${new Date(empleo.created).toLocaleDateString()}</p>
-                            <hr>
-                        `;
-                        listaEmpleos.appendChild(oferta);
-                    });
-
-                    // Habilitar/deshabilitar los botones de paginación
-                    document.getElementById('prevPage').disabled = currentPage <= 1;
-                    document.getElementById('nextPage').disabled = data.results.length === 0;
-                })
-                .catch(error => {
-                    console.error('Error al obtener los empleos:', error);
-                });
-        }
-
-        function cambiarPagina(increment) {
-            currentPage += increment;
-            obtenerEmpleos();
-        }
-
-        // Mostrar/ocultar las opciones
-        document.querySelector('.select-box').addEventListener('click', function() {
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.classList.toggle('visible');
-        });
-
-        // Actualizar selección al hacer clic en las opciones
-        document.querySelectorAll('#options-container input').forEach(input => {
-            input.addEventListener('change', actualizarSeleccion);
-        });
-
-        // Inicializar con la primera página
-        obtenerEmpleos();
-    </script>
+    <!-- Script separado y comentado -->
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+  
