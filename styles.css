@@ -92,10 +92,16 @@ label {
     opacity: 1;
     transform: translateY(0);
 }
+.hidden {
+    display: none;
+}
 
 #mostrarselects.hidden {
     opacity: 0;
     transform: translateY(-10px);
+    height: 0;
+    display: none;
+
 }
 
 

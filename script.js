@@ -1,4 +1,5 @@
 let currentPage = 1; // Inicia en la primera página de resultados
+let isPopupShown = false; // Bandera para controlar si el popup ya fue mostrado
 
 // Función para mostrar las tecnologías seleccionadas
 function actualizarSeleccion() {
@@ -16,11 +17,22 @@ function actualizarSeleccion() {
 function obtenerEmpleos() {
     const ciudad = document.getElementById('ciudad').value; // Obtiene la ciudad seleccionada
     const selectedTechnologies = Array.from(document.querySelectorAll('#options-container input:checked'))
-        .map(input => input.value) // Obtiene las tecnologías seleccionadas
-        .join(','); // Las une con coma
+        .map(input => input.value); // Obtiene las tecnologías seleccionadas
+
+    // Validación: si no hay tecnologías seleccionadas y aún no se ha mostrado el popup
+    if (selectedTechnologies.length === 0) {
+        if (!isPopupShown) {
+            alert('Por favor, selecciona al menos una tecnología para obtener ofertas de empleo.');
+            isPopupShown = true; // Marca que el popup ya fue mostrado
+        }
+        return; // Detiene la ejecución de la función si no hay tecnologías seleccionadas
+    }
+
+    // Une las tecnologías seleccionadas en una cadena separada por comas
+    const technologies = selectedTechnologies.join(',');
 
     // URL de la API para obtener los empleos, utilizando la ciudad y las tecnologías seleccionadas
-    const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${selectedTechnologies}&where=${ciudad}`;
+    const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${technologies}&where=${ciudad}`;
 
     // Hace una solicitud HTTP (fetch) para obtener los datos de la API
     fetch(url)
@@ -51,6 +63,9 @@ function obtenerEmpleos() {
             console.error('Error al obtener los empleos:', error); // Muestra el error en caso de que algo falle
         });
 }
+
+// Asocia el evento de clic al botón de "Obtener Ofertas"
+document.querySelector('button').addEventListener('click', obtenerEmpleos);
 
 // Función para cambiar de página
 function cambiarPagina(increment) {
@@ -95,5 +110,4 @@ document.querySelectorAll('#options-container input').forEach(input => {
     input.addEventListener('change', mostrarSeleccion); // Al cambiar una tecnología
 });
 
-// Inicializar la página con los primeros empleos
-obtenerEmpleos(); // Llama a la función para obtener los empleos al cargar la página
+
