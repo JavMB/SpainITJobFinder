@@ -1,26 +1,47 @@
-# SpainITJobFinder
+# Web Móvil de Empleos IT en España
 
-Este proyecto permite a los usuarios explorar ofertas de trabajo en el sector IT en España. Utiliza la API de Adzuna para mostrar las ofertas de empleo de acuerdo con la ciudad seleccionada y las tecnologías deseadas.
+## Descripción
 
-## Características:
-- Filtrar empleos por ciudad (Madrid, Barcelona, Valencia, etc.).
-- Seleccionar múltiples tecnologías y puestos relacionados con IT.
-- Paginación para navegar por las ofertas de empleo.
-- Interfaz amigable y fácil de usar.
+Este proyecto es una aplicación web diseñada para dispositivos móviles que permite a los usuarios buscar ofertas de empleo en el sector IT en España, filtrando por ciudad y tecnologías deseadas. Los resultados se obtienen desde la API pública de Adzuna y muestran enlaces directos a las ofertas reales.
 
-## Cómo usar:
-1. Selecciona la ciudad de tu preferencia.
-2. Elige las tecnologías y puestos de trabajo.
-3. Haz clic en "Obtener Ofertas" para ver los trabajos disponibles.
+## Características
 
-## Tecnologías utilizadas:
-- HTML5
-- CSS3
-- JavaScript
-- API de Adzuna
+-   Filtros avanzados: Selección de ciudad y tecnologías IT.
+-   Lista interactiva: Ofertas de empleo presentadas en tarjetas con enlaces a Adzuna.
+-   Paginación: Navega entre múltiples páginas de resultados.
+-   Predicción de empleos: Genera un análisis de las tecnologías más demandadas utilizando la API de OpenAI.
 
-## Requisitos:
-- Un navegador web moderno.
+## Tecnologías utilizadas
 
-## Licencia:
-Este proyecto está bajo la licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+-   HTML5: Para la estructura de la aplicación.
+-   CSS3: Para los estilos responsivos y personalizados.
+-   JavaScript (ES6+): Para la lógica de conexión con la API y la manipulación del DOM.
+-   API de Adzuna: Para obtener datos de empleos en tiempo real.
+-   API de OpenAI: Para analizar las ofertas obtenidas.
+
+## Instrucciones de uso
+
+1.  Clona este repositorio:  
+    git clone  [https://github.com/tu-usuario/web-movil-api.git](https://github.com/tu-usuario/web-movil-api.git)
+2.  Abre el archivo index.html en un navegador.
+3.  Selecciona una ciudad y las tecnologías de tu interés.
+4.  Haz clic en "Obtener Ofertas" para cargar las vacantes disponibles.
+5.  Usa los botones "Anterior" y "Siguiente" para navegar entre páginas.
+6.  Haz clic en un empleo para ir a su página oficial en Adzuna.
+7.  Utiliza el botón "Predecir empleo" para recibir un análisis rápido de las tecnologías más demandadas.
+
+## Cómo contribuir
+
+1.  Haz un fork del repositorio.
+2.  Crea una rama para tus cambios:  
+    git checkout -b feature/nueva-funcion
+3.  Realiza un pull request describiendo tus cambios.
+
+## Créditos
+
+-   Desarrollador: Javier Mengual
+-   API utilizada: Adzuna
+-   Estilo inspirado en: Diseño minimalista para dispositivos móviles.
+
+**Licencia**  
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
