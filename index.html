@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleos IT en España</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Empleos IT en España</h1>
-    
+
     <!-- Selección de ciudad -->
     <label for="ciudad">Selecciona una ciudad:</label>
     <select id="ciudad">
@@ -95,10 +97,15 @@
     <button onclick="cambiarPagina(-1)" id="prevPage" disabled>Anterior</button>
     <button onclick="cambiarPagina(1)" id="nextPage" disabled>Siguiente</button>
 
+    <!-- Botón para hacer la predicción -->
+    <button id="btnPredecir" onclick="predecirEmpleo()">Predecir empleo</button>
+    <div id="prediccion" style="margin-top: 20px; font-style: italic;"></div>
+    
+
+
     <!-- Script separado y comentado -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
-
-
-  
