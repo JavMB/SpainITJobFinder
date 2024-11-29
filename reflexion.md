@@ -16,6 +16,13 @@ Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empl
     
 4. **details.html:** Justificación de la elección del diseño y omisión de details.html.
    - **Solución:** "He decidido que los enlaces de los empleos apunten directamente a la página oficial de Adzuna, ya que la API proporciona un enlace redirigido a la oferta original. Esto garantiza una experiencia de usuario directa y evita redundancias.".
+   
+5. **CORS y server:** Inicialmente, probé varias APIs diferentes antes de decidirme por este proyecto, y uno de los principales problemas fue el CORS. Para resolver esto, comencé a crear un servidor backend en Node.js que manejara las solicitudes a las APIs de manera segura, evitando los problemas de CORS.
+
+   Sin embargo, cuando decidí utilizar la API de Adzuna, me di cuenta de que no tenía problemas con CORS, ya que su API permite hacer solicitudes directamente desde el       navegador sin restricciones. Esto me permitió simplificar el proyecto y mantenerlo como una aplicación estática, eliminando la necesidad de un servidor backend.
+   
+ - **Solución:** "Debido a esto, decidí manejar la API Key directamente en las páginas del frontend y no a través de un archivo .env, ya que la API de Adzuna no requiere un servidor intermedio y se puede acceder de forma segura desde el cliente.".  
+     
 
 ## Nota y autoevaluación
 ### Nota: **7.95/10**
