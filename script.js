@@ -112,7 +112,7 @@ async function predecirEmpleo() {
         ${descripciones}
     `;
 
-    const apiKey = '';  // Asegúrate de que esta clave sea válida
+    const apiKey = ;  // Asegúrate de que esta clave sea válida
 
     try {
         
