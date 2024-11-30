@@ -7,8 +7,8 @@ function actualizarSeleccion() {
         .map(input => input.value);
 
     document.getElementById('selected-technologies').textContent = selectedTechnologies.length > 0
-        ? selectedTechnologies.join(', ') 
-        : 'Selecciona las tecnologías'; 
+        ? selectedTechnologies.join(', ')
+        : 'Selecciona las tecnologías';
 }
 
 // Función para obtener los empleos
@@ -95,64 +95,6 @@ document.querySelectorAll('#options-container input').forEach(input => {
 
 
 
-async function predecirEmpleo() {
-    const listaEmpleos = document.querySelectorAll('#empleos div');
-    const descripciones = Array.from(listaEmpleos).map(div => div.innerText).join('\n\n');
 
-    if (descripciones.length === 0) {
-        alert('Primero busca empleos antes de usar esta función.');
-        return;
-    }
-
-    const prompt = `
-        Analiza las siguientes descripciones de empleos y responde:
-        1. ¿Cuáles son las tecnologías más demandadas?
-        2. Da un consejo breve para los candidatos en base a esta información.
-        Descripciones:
-        ${descripciones}
-    `;
-
-    const apiKey = '';  // Asegúrate de que esta clave sea válida
-
-    try {
-        
-        const response = await fetch('https://api.openai.com/v1/chat/completions', { 
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            },
-            body: JSON.stringify({
-                model: 'gpt-3.5-turbo',  //  gpt-3.5-turbo
-                messages: [
-                    { role: 'system', content: 'Eres un asistente útil.' },
-                    { role: 'user', content: prompt }
-                ],
-                max_tokens: 150
-            })
-        });
-
-        if (!response.ok) {
-            const errorData = await response.json();
-            console.error('Error en la solicitud:', errorData);
-            alert('Hubo un error con la solicitud a OpenAI');
-            return;
-        }
-
-        const data = await response.json();
-
-        if (!data.choices || data.choices.length === 0) {
-            console.error('Error: No se encontraron "choices" en la respuesta:', data);
-            alert('No se pudo generar una predicción.');
-            return;
-        }
-
-        const prediccion = data.choices[0]?.message.content || 'No se pudo generar una predicción.';
-        document.getElementById('prediccion').innerText = prediccion;
-    } catch (error) {
-        console.error('Error en la conexión con la API:', error);
-        alert('Hubo un error al conectar con la API de OpenAI');
-    }
-}
 
 
