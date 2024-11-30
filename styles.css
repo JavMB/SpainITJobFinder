@@ -1,178 +1,102 @@
-/* Estilos globales */
 body {
-    font-family: 'Poppins', sans-serif; /* Usamos Poppins para un look moderno */
+    font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-/* Estilo para el encabezado */
-/* Estilo para el encabezado */
 h1 {
     text-align: center;
+    background: linear-gradient(135deg, #4CAF50, #2d9b56);
+    padding: 20px;
     color: white;
-    background: linear-gradient(135deg, #4CAF50, #2d9b56);  /* Gradiente con un verde moderno */
-    padding: 40px 20px; /* Más padding para que el título respire */
-    margin: 0;
-    font-size: 3.5em; /* Aumento el tamaño para hacerlo más prominente */
-    letter-spacing: 2px; /* Espacio entre letras */
-    font-weight: 700; /* Negrita */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+    font-size: 2em;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out; /* Transición para efectos interactivos */
-    margin-bottom: 30px; /* Espacio debajo */
-    position: relative;
-    text-transform: capitalize; /* Aplicar mayúsculas solo al primer carácter de cada palabra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para el ícono de la lupa */
-/* Estilo para el ícono de la lupa */
-h1 i {
-    font-size: 1.5em; /* Aseguramos que el ícono tenga un tamaño adecuado */
-    margin-right: 15px; /* Espacio entre el ícono y el texto */
-    vertical-align: middle; /* Alineamos el ícono con el texto */
-    transition: transform 0.3s ease; /* Transición suave al hacer hover */
-}
-
-/* Animación de hover */
-h1:hover i {
-    transform: rotate(360deg); /* Gira la lupa solo cuando pasa el ratón por encima */
-}
-
-
-/* Añadir sombra de texto */
-h1 {
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el texto */
-}
-
-/* Animación de la lupa */
-@keyframes icon-animation {
-    0% {
-        transform: rotate(0deg); /* El ícono comienza en posición normal */
-    }
-    50% {
-        transform: rotate(360deg); /* El ícono gira 360 grados */
-    }
-    100% {
-        transform: rotate(0deg); /* El ícono regresa a su posición original */
-    }
-}
-
-
-
-/* Estilo para los botones */
 button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 15px 25px; /* Tamaño más grande para el botón */
-    font-size: 1.2em; /* Fuente más grande */
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 30px; /* Bordes redondeados */
-    margin: 20px 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    font-size: 1em;
 }
 
 button:hover {
-    background-color: #45a049; /* Cambio de color al hacer hover */
-    transform: translateY(-3px); /* Eleva el botón al pasar el ratón */
+    background-color: #45a049;
 }
 
-button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
+.select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduce el espacio entre los elementos */
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-/* Estilo para el contenido de los empleos */
+.select2-container {
+    width: 100% !important;
+    margin-bottom: -5px;
+   
+}
+
+
 #empleos {
     margin: 20px auto;
-    width: 80%;
+    max-width: 800px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automáticamente */
-    grid-gap: 20px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-#empleos div {
+#empleos {
+    margin: 20px auto;
+    max-width: 800px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.oferta {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-    border: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#empleos div:hover {
-    transform: translateY(-5px); /* Efecto de levitación */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+.oferta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-#empleos h3 {
+.oferta h3 {
     font-size: 1.3em;
+    margin: 0 0 10px;
     color: #333;
-    font-weight: 600;
-    margin-bottom: 15px;
 }
 
-#empleos a {
+.oferta h3 a {
     text-decoration: none;
     color: #4CAF50;
-    font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-#empleos a:hover {
-    color: #45a049; /* Cambia el color de los enlaces al hacer hover */
+.oferta h3 a:hover {
+    color: #45a049;
 }
 
-#empleos p {
-    font-size: 1em;
-    color: #777;
-    margin-bottom: 15px;
+.oferta p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9em;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .custom-select {
-        width: 100%;
-    }
 
-    .select-box {
-        font-size: 1.2em;
-        padding: 15px;
-    }
 
-    .options-container {
-        position: relative;
-        max-height: 250px;
-        font-size: 1.1em;
-    }
-
-    .options-container label {
-        padding: 15px;
-    }
-
-    .select-box .arrow {
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 6px solid #4CAF50;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .custom-select {
-        width: 100%;
-    }
-
-    .options-container {
-        max-height: 200px;
-    }
-
-    .options-container label {
-        font-size: 1.2em;
-    }
-}

@@ -8,100 +8,96 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 </head>
 
 <body>
     <h1>SpainITJobFinder <i class="fas fa-search"></i></h1>
 
+    <div class="select-container">
+        <label for="ciudad">Selecciona una ciudad:</label>
+        <select id="ciudad">
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="zaragoza">Zaragoza</option>
+            <option value="malaga">Málaga</option>
+            <option value="murcia">Murcia</option>
+            <option value="palma">Palma de Mallorca</option>
+            <option value="las-palmas">Las Palmas de Gran Canaria</option>
+            <option value="bilbao">Bilbao</option>
+            <option value="alicante">Alicante</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="vigo">Vigo</option>
+            <option value="valladolid">Valladolid</option>
+            <option value="a-coruna">A Coruña</option>
+            <option value="granada">Granada</option>
+            <option value="oviedo">Oviedo</option>
+            <option value="santander">Santander</option>
+            <option value="toledo">Toledo</option>
+            <option value="girona">Girona</option>
+            <option value="logrono">Logroño</option>
+            <option value="caceres">Cáceres</option>
+            <option value="leon">León</option>
+            <option value="castellon">Castellón de la Plana</option>
+            <option value="salamanca">Salamanca</option>
+            <option value="albacete">Albacete</option>
+            <option value="pontevedra">Pontevedra</option>
+            <option value="huelva">Huelva</option>
+            <option value="badajoz">Badajoz</option>
+            <option value="jerez">Jerez de la Frontera</option>
+            <option value="segovia">Segovia</option>
+            <option value="burgos">Burgos</option>
+            <option value="cuenca">Cuenca</option>
+            <option value="teruel">Teruel</option>
+        </select>
 
-    <!-- Selección de ciudad -->
-    <label for="ciudad">Selecciona una ciudad:</label>
-    <select id="ciudad">
-        <option value="madrid">Madrid</option>
-        <option value="barcelona">Barcelona</option>
-        <option value="valencia">Valencia</option>
-        <option value="sevilla">Sevilla</option>
-        <option value="zaragoza">Zaragoza</option>
-        <option value="malaga">Málaga</option>
-        <option value="murcia">Murcia</option>
-        <option value="palma">Palma de Mallorca</option>
-        <option value="las-palmas">Las Palmas de Gran Canaria</option>
-        <option value="bilbao">Bilbao</option>
-        <option value="alicante">Alicante</option>
-        <option value="cordoba">Córdoba</option>
-        <option value="vigo">Vigo</option>
-        <option value="valladolid">Valladolid</option>
-        <option value="a-coruna">A Coruña</option>
-        <option value="granada">Granada</option>
-        <option value="oviedo">Oviedo</option>
-        <option value="santander">Santander</option>
-        <option value="toledo">Toledo</option>
-        <option value="girona">Girona</option>
-        <option value="logrono">Logroño</option>
-        <option value="caceres">Cáceres</option>
-        <option value="leon">León</option>
-        <option value="castellon">Castellón de la Plana</option>
-        <option value="salamanca">Salamanca</option>
-        <option value="albacete">Albacete</option>
-        <option value="pontevedra">Pontevedra</option>
-        <option value="huelva">Huelva</option>
-        <option value="badajoz">Badajoz</option>
-        <option value="jerez">Jerez de la Frontera</option>
-        <option value="segovia">Segovia</option>
-        <option value="burgos">Burgos</option>
-        <option value="cuenca">Cuenca</option>
-        <option value="teruel">Teruel</option>
-    </select>
-
-    <!-- Selección de tecnologías -->
-    <label for="technologies">Selecciona las tecnologías:</label>
-    <div class="custom-select">
-        <div class="select-box">
-            <span id="selected-technologies">Selecciona las tecnologías</span>
-            <i class="arrow"></i>
-        </div>
-        <div id="options-container" class="options-container">
-            <label><input type="checkbox" value="python"> Python</label>
-            <label><input type="checkbox" value="java"> Java</label>
-            <label><input type="checkbox" value="javascript"> JavaScript</label>
-            <label><input type="checkbox" value="fullstack"> Fullstack</label>
-            <label><input type="checkbox" value="backend"> Backend</label>
-            <label><input type="checkbox" value="frontend"> Frontend</label>
-            <label><input type="checkbox" value="csharp"> C#</label>
-            <label><input type="checkbox" value="php"> PHP</label>
-            <label><input type="checkbox" value="ruby"> Ruby</label>
-            <label><input type="checkbox" value="go"> Go</label>
-            <label><input type="checkbox" value="swift"> Swift</label>
-            <label><input type="checkbox" value="kotlin"> Kotlin</label>
-            <label><input type="checkbox" value="typescript"> TypeScript</label>
-            <label><input type="checkbox" value="rust"> Rust</label>
-            <label><input type="checkbox" value="scala"> Scala</label>
-            <label><input type="checkbox" value="nodejs"> Node.js</label>
-            <label><input type="checkbox" value="react"> React</label>
-            <label><input type="checkbox" value="angular"> Angular</label>
-            <label><input type="checkbox" value="vuejs"> Vue.js</label>
-            <label><input type="checkbox" value="docker"> Docker</label>
-            <label><input type="checkbox" value="aws"> AWS</label>
-            <label><input type="checkbox" value="azure"> Azure</label>
-            <label><input type="checkbox" value="googlecloud"> Google Cloud</label>
-            <label><input type="checkbox" value="devops"> DevOps</label>
-        </div>
-    </div>
-
-    <!-- Selección resumida -->
-    <div id="mostrarselects" class="hidden">
-        <p><strong>Ciudad seleccionada:</strong> <span id="ciudad-seleccionada">Ninguna</span></p>
-        <p><strong>Tecnologías seleccionadas:</strong> <span id="tecnologias-seleccionadas">Ninguna</span></p>
+        <label for="technologies">Selecciona las tecnologías:</label>
+        <select id="technologies" multiple="multiple" style="width: 100%">
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javascript">JavaScript</option>
+            <option value="fullstack">Fullstack</option>
+            <option value="backend">Backend</option>
+            <option value="frontend">Frontend</option>
+            <option value="csharp">C#</option>
+            <option value="php">PHP</option>
+            <option value="ruby">Ruby</option>
+            <option value="go">Go</option>
+            <option value="swift">Swift</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="typescript">TypeScript</option>
+            <option value="rust">Rust</option>
+            <option value="scala">Scala</option>
+            <option value="nodejs">Node.js</option>
+            <option value="react">React</option>
+            <option value="angular">Angular</option>
+            <option value="vuejs">Vue.js</option>
+            <option value="docker">Docker</option>
+            <option value="aws">AWS</option>
+            <option value="azure">Azure</option>
+            <option value="googlecloud">Google Cloud</option>
+            <option value="devops">DevOps</option>
+            <!-- Más opciones -->
+        </select>
+        <label>
+            <input type="checkbox" id="sortByDate"> Ordenar por fecha
+        </label>
+        
     </div>
 
     <!-- Botones y contenedor de empleos -->
     <button onclick="obtenerEmpleos()">Obtener Ofertas</button>
     <div id="empleos"></div>
-    <button onclick="cambiarPagina(-1)" id="prevPage" disabled>Anterior</button>
-    <button onclick="cambiarPagina(1)" id="nextPage" disabled>Siguiente</button>
-
-
-
+    <div class="pagination">
+        <button id="prevPage" disabled>Anterior</button>
+        <button id="nextPage">Siguiente</button>
+    </div>
 
 
     <!-- Script separado y comentado -->
