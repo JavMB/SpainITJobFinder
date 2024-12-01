@@ -7,6 +7,7 @@ $(document).ready(function () {
         allowClear: true,
         closeOnSelect: false,
         minimumResultsForSearch: Infinity,
+        
     };
 
     $('#ciudad').select2({ ...commonConfig, closeOnSelect: true });
@@ -23,6 +24,9 @@ $(document).ready(function () {
             $('#technologies, #ciudad').select2('close');
         }
     });
+    $(document).on('touchend', function(){
+        $(".select2-search, .select2-focusser").remove();
+        })
 
     $('#prevPage, #nextPage').on('click', function () {
         cambiarPagina($(this).attr('id') === 'nextPage' ? 1 : -1);
