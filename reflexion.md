@@ -15,7 +15,7 @@ Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empl
 
 3. **API de predicción (OpenAI/Hugging Face's):** Intento de implementación de análisis de tecnologías con IA:
 
-   Objetivo: Extraer automáticamente tecnologías y frameworks (como Java Spring) de las descripciones de ofertas de trabajo mediante APIs de IA, como ChatGPT y Hugging Face.
+   Objetivo: Extraer automáticamente tecnologías y frameworks (como Spring de Java) de las descripciones de ofertas de trabajo mediante APIs de modelos IA, como ChatGPT y Hugging Face.
 
    Problema: A pesar de los intentos con modelos como ChatGPT, estos requieren créditos y no pude. Con modelos de Hugging Face como Qwen, logré filtrar el texto en su playground de la web, pero no    conseguí que devolviera los frameworks en el formato necesario mediante llamadas apis.
     
