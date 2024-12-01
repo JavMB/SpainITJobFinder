@@ -21,13 +21,12 @@ Este proyecto es una aplicación web diseñada para dispositivos móviles que pe
 
 1.  Clona este repositorio:  
     git clone  [https://github.com/tu-usuario/web-movil-api.git](https://github.com/tu-usuario/web-movil-api.git)
-2.  El api ya viene dentro porque no supone un riesgo critico de seguridad.
-3.  Abre el archivo index.html en un navegador.
-4.  Selecciona una ciudad y las tecnologías de tu interés.
-5.  Haz clic en "Obtener Ofertas" para cargar las vacantes disponibles.
-6.  Usa los botones "Anterior" y "Siguiente" para navegar entre páginas.
-7.  Haz clic en un empleo para ir a su página oficial en Adzuna.
-8.  Utiliza el botón "Predecir empleo" para recibir un análisis rápido de las tecnologías más demandadas.
+2.  Abre el archivo index.html en un navegador.
+3.  Selecciona una ciudad y las tecnologías de tu interés.
+4.  Haz clic en "Obtener Ofertas" para cargar las vacantes disponibles.
+5.  Usa los botones "Anterior" y "Siguiente" para navegar entre páginas.
+6.  Haz clic en un empleo para ir a su página oficial en Adzuna.
+7.  Utiliza el botón "Predecir empleo" para recibir un análisis rápido de las tecnologías más demandadas.
 
 ## Cómo contribuir
 
