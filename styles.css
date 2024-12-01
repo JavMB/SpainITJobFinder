@@ -159,6 +159,13 @@ button:hover {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); /* Forma de "tick" */
 }
+/* Desactiva la interacción con select2 en dispositivos móviles */
+@media (max-width: 768px) {
+    #technologies.select2-container--open .select2-selection {
+        pointer-events: none; /* Deshabilita la interacción */
+    }
+}
+
 
 
 
