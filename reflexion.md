@@ -1,7 +1,9 @@
 # Reflexión del Proyecto
 
 ## ¿Por qué elegiste esa API?
-Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empleo en España, lo cual está directamente relacionado con el objetivo del proyecto. Además, su documentación es clara y permite aplicar filtros como la localización y palabras clave, que enriquecen la experiencia del usuario.
+Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empleo en España, lo cual está directamente relacionado con el objetivo del proyecto. Además, su documentación es clara y permite aplicar filtros como la localización y palabras clave, que enriquecen la experiencia del usuario, aparte es un proyecto con utilidad de uso de cara a un futuro que me servira para buscar empleo. 
+
+"El verdadero valor de la programación radica en crear soluciones que mejoren la vida humana, no en escribir líneas de código por escribir. La tecnología debe ser una herramienta para transformar positivamente el mundo que nos rodea." 
 
 ## ¿Qué problemas tuviste y cómo los solucionaste?
 ### Problemas principales:
@@ -13,9 +15,9 @@ Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empl
 
 3. **API de predicción (OpenAI/Hugging Face's):** Intento de implementación de análisis de tecnologías con IA:
 
-Objetivo: Extraer automáticamente tecnologías y frameworks (como Java Spring) de las descripciones de ofertas de trabajo mediante APIs de IA, como ChatGPT y Hugging Face.
+   Objetivo: Extraer automáticamente tecnologías y frameworks (como Java Spring) de las descripciones de ofertas de trabajo mediante APIs de IA, como ChatGPT y Hugging Face.
 
-Problema: A pesar de los intentos con modelos como ChatGPT, estos requieren créditos y no pude. Con modelos de Hugging Face como Qwen, logré filtrar el texto en su playground de la web, pero no conseguí que devolviera los frameworks en el formato necesario mediante llamadas apis.
+   Problema: A pesar de los intentos con modelos como ChatGPT, estos requieren créditos y no pude. Con modelos de Hugging Face como Qwen, logré filtrar el texto en su playground de la web, pero no    conseguí que devolviera los frameworks en el formato necesario mediante llamadas apis.
     
 4. **details.html:** Justificación de la elección del diseño y omisión de details.html.
    - **Solución:** "He decidido que los enlaces de los empleos apunten directamente a la página oficial de Adzuna, ya que la API proporciona un enlace redirigido a la oferta original. Esto garantiza una experiencia de usuario directa y evita redundancias.".
@@ -28,7 +30,7 @@ Problema: A pesar de los intentos con modelos como ChatGPT, estos requieren cré
      
 
 ## Nota y autoevaluación
-### Nota: **7.95/10**
+### Nota: **7.99/10**
 Me pongo esta nota porque:
 - Cumplí con la mayoría de los objetivos planteados.
 - La aplicación es funcional y fácil de usar.
