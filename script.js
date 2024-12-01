@@ -25,6 +25,9 @@ $(document).ready(function () {
             $('#technologies, #ciudad').select2('close');
         }
     });
+    $(document).on('touchend', function(){
+        $(".select2-search, .select2-focusser").remove();
+        })
 
     // Manejo de paginación
     $('#prevPage, #nextPage').on('click', function () {
