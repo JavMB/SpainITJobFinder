@@ -42,7 +42,9 @@ function obtenerEmpleos() {
     // Unir tecnologías en una cadena separada por " AND "
     const tecnologiasQuery = tecnologias.map((t) => `"${t}"`).join(' AND ');
 
-    const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${tecnologiasQuery}&where=${encodeURIComponent(ciudad)}`;
+    // Normalizar y codificar la ciudad
+    const ciudadNormalizada = ciudad.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const url = `https://api.adzuna.com/v1/api/jobs/es/search/${currentPage}?app_id=def323be&app_key=91e6dd50eb9779648a646f2b425a27a5&what=${tecnologiasQuery}&where=${encodeURIComponent(ciudadNormalizada)}`;
 
     fetch(url)
         .then((response) => response.json())
@@ -77,6 +79,7 @@ function obtenerEmpleos() {
         })
         .catch((error) => console.error('Error:', error));
 }
+
 
 function cambiarPagina(increment) {
     currentPage += increment;
