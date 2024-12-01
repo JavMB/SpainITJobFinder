@@ -26,7 +26,7 @@ Este proyecto es una aplicación web diseñada para dispositivos móviles que pe
 4.  Haz clic en "Obtener Ofertas" para cargar las vacantes disponibles.
 5.  Usa los botones "Anterior" y "Siguiente" para navegar entre páginas.
 6.  Haz clic en un empleo para ir a su página oficial en Adzuna.
-7.  Utiliza el botón "Predecir empleo" para recibir un análisis rápido de las tecnologías más demandadas.
+8.  Puedes utilizar el checkbox para filtrar las ofertas por mas recientes.
 
 ## Cómo contribuir
 
