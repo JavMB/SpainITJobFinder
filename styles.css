@@ -7,6 +7,7 @@ body {
 }
 
 h1 {
+    margin: 5px;
     text-align: center;
     background: linear-gradient(135deg, #4CAF50, #2d9b56);
     padding: 20px;
@@ -15,7 +16,18 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, text-shadow 0.2s ease;
 }
+
+/* Efecto sutil al hacer hover */
+h1:hover {
+    transform: translateY(-3px); /* Pequeño movimiento hacia arriba */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra ligeramente más pronunciada */
+    background: linear-gradient(135deg, #45a049, #38a147); /* Cambio de gradiente suave */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra de texto más ligera */
+}
+
+
 
 button {
     display: block;
@@ -27,11 +39,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Cambia a un tono más oscuro */
+    transform: translateY(-3px); /* Efecto de movimiento hacia arriba */
 }
+
 
 .select-container {
     display: flex;
@@ -43,9 +58,14 @@ button:hover {
 
 .select2-container {
     width: 100% !important;
+    height: 35px;
     margin-bottom: -5px;
    
 }
+.select2-selection__clear {
+    display: none !important; /* Oculta la "X" */
+}
+
 
 
 #empleos {
@@ -63,6 +83,7 @@ button:hover {
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
 
 .oferta {
     background-color: #ffffff;
@@ -96,6 +117,47 @@ button:hover {
     margin: 5px 0;
     color: #555;
     font-size: 0.9em;
+}
+/* Ocultar el checkbox estándar */
+.custom-checkbox input[type="checkbox"] {
+    display: none; /* Oculta el checkbox original */
+}
+
+/* Crear el diseño del checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+.custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0; /* Fondo del checkbox */
+    border: 2px solid #ccc;
+    border-radius: 4px; /* Bordes redondeados */
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Añadir el "tick" cuando el checkbox está marcado */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #4caf50; /* Color de fondo del checkbox cuando está marcado */
+    border-color: #4caf50;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); /* Forma de "tick" */
 }
 
 

@@ -84,11 +84,39 @@ function obtenerEmpleos() {
 function cambiarPagina(increment) {
     currentPage += increment;
 
-    // Mueve el scroll hacia el contenedor principal
-    document.getElementById('empleos').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-    });
+    // Desplazamiento suave hacia el contenedor principal de empleos
+    const scrollContainer = document.getElementById('empleos');
 
+    // Función para realizar un desplazamiento suave con easing
+    function smoothScrollTo(target, duration) {
+        const start = window.pageYOffset;  // Posición actual
+        const end = target.offsetTop;  // Posición final
+        const distance = end - start;  // Distancia a recorrer
+        const startTime = performance.now();  // Marca de tiempo de inicio
+
+        // Función de easing para un desplazamiento más natural
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Easing (suaviza el movimiento)
+        }
+
+        function scroll() {
+            const currentTime = performance.now();  // Marca de tiempo actual
+            const timeElapsed = currentTime - startTime;
+            const progress = timeElapsed / duration;  // Progreso de la animación
+
+            if (progress < 1) {
+                const easedProgress = easeInOutQuad(progress); // Aplica easing
+                window.scrollTo(0, start + (distance * easedProgress));  // Desplazamiento suave
+                requestAnimationFrame(scroll);  // Continuar la animación
+            } else {
+                window.scrollTo(0, end);  // Asegura que llega al destino
+            }
+        }
+
+        scroll();  // Iniciar desplazamiento
+    }
+
+    // Llama a la función de desplazamiento suave
+    smoothScrollTo(scrollContainer, 1000);  // 1000ms para un desplazamiento más suave
     obtenerEmpleos();
 }
