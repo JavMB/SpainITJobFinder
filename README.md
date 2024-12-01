@@ -9,7 +9,6 @@ Este proyecto es una aplicación web diseñada para dispositivos móviles que pe
 -   Filtros avanzados: Selección de ciudad y tecnologías IT.
 -   Lista interactiva: Ofertas de empleo presentadas en tarjetas con enlaces a Adzuna.
 -   Paginación: Navega entre múltiples páginas de resultados.
--   Predicción de empleos: Genera un análisis de las tecnologías más demandadas utilizando la API de OpenAI.
 
 ## Tecnologías utilizadas
 
@@ -17,13 +16,12 @@ Este proyecto es una aplicación web diseñada para dispositivos móviles que pe
 -   CSS3: Para los estilos responsivos y personalizados.
 -   JavaScript (ES6+): Para la lógica de conexión con la API y la manipulación del DOM.
 -   API de Adzuna: Para obtener datos de empleos en tiempo real.
--   API de OpenAI: Para analizar las ofertas obtenidas.
 
 ## Instrucciones de uso
 
 1.  Clona este repositorio:  
     git clone  [https://github.com/tu-usuario/web-movil-api.git](https://github.com/tu-usuario/web-movil-api.git)
-2.  Copia y pega la API KEY que he adjuntado en aules en ->script.js ->const apiKey.
+2.  El api ya viene dentro porque no supone un riesgo critico de seguridad.
 3.  Abre el archivo index.html en un navegador.
 4.  Selecciona una ciudad y las tecnologías de tu interés.
 5.  Haz clic en "Obtener Ofertas" para cargar las vacantes disponibles.

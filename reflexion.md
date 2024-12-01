@@ -11,8 +11,11 @@ Elegí la API de Adzuna porque ofrece datos en tiempo real sobre ofertas de empl
 2. **Paginación:** Al cambiar de página, algunos filtros se perdían.
    - **Solución:** Mantuve los valores seleccionados en variables globales que se actualizan al realizar una nueva consulta.
 
-3. **API de predicción (OpenAI):** Fue un reto integrar una funcionalidad que analizara las descripciones obtenidas de Adzuna.
-   - **Solución:** Usé una llamada adicional a la API de OpenAI para generar una predicción basada en las descripciones y la mostré en la interfaz.
+3. **API de predicción (OpenAI/Hugging Face's):** Intento de implementación de análisis de tecnologías con IA:
+
+Objetivo: Extraer automáticamente tecnologías y frameworks (como Java Spring) de las descripciones de ofertas de trabajo mediante APIs de IA, como ChatGPT y Hugging Face.
+
+Problema: A pesar de los intentos con modelos como ChatGPT, estos requieren créditos y no pude. Con modelos de Hugging Face como Qwen, logré filtrar el texto en su playground de la web, pero no conseguí que devolviera los frameworks en el formato necesario mediante llamadas apis.
     
 4. **details.html:** Justificación de la elección del diseño y omisión de details.html.
    - **Solución:** "He decidido que los enlaces de los empleos apunten directamente a la página oficial de Adzuna, ya que la API proporciona un enlace redirigido a la oferta original. Esto garantiza una experiencia de usuario directa y evita redundancias.".
