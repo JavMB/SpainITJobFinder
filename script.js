@@ -5,11 +5,11 @@ $(document).ready(function () {
     const commonConfig = {
         placeholder: "Selecciona una opción",
         allowClear: true,
-        closeOnSelect: false,
+        closeOnSelect: true,  // Esto cierra el multiselect después de seleccionar una opción
         minimumResultsForSearch: Infinity,
-        
     };
 
+    // Inicializa select2 en los campos
     $('#ciudad').select2({ ...commonConfig, closeOnSelect: true });
     $('#technologies').select2(commonConfig);
 
@@ -19,19 +19,19 @@ $(document).ready(function () {
         obtenerEmpleos();  // Llama a obtenerEmpleos después de cambiar la opción
     });
 
+    // Cerrar select2 al hacer clic fuera de él
     $(document).on('click touchstart', (e) => {
         if (!$(e.target).closest('.select2-container').length) {
             $('#technologies, #ciudad').select2('close');
         }
     });
-    $(document).on('touchend', function(){
-        $(".select2-search, .select2-focusser").remove();
-        })
 
+    // Manejo de paginación
     $('#prevPage, #nextPage').on('click', function () {
         cambiarPagina($(this).attr('id') === 'nextPage' ? 1 : -1);
     });
 });
+
 
 
 function obtenerEmpleos() {
