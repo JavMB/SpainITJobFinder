@@ -47,5 +47,5 @@ Este proyecto me ayudó a mejorar mis habilidades en:
 - **Diseño responsive** para adaptarse a dispositivos móviles.
 - **Manejo de eventos** y manipulación del **DOM** con **JavaScript**.
 
-Y como nota de avaluación me pongo un 8 también.
+Y como nota de avaluación me pongo un 8 también 😁.
 
