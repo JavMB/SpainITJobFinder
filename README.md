@@ -4,6 +4,9 @@
 
 Este proyecto es una **aplicación web responsiva** que permite a los usuarios buscar **ofertas de empleo en el sector IT en España**, filtrando por **ciudad** y **tecnologías deseadas**. La aplicación está diseñada para funcionar de manera óptima tanto en **dispositivos móviles** como en **PC**. Los resultados se obtienen desde la API pública de **Adzuna** y muestran **enlaces directos** a las ofertas reales.
 
+![Captura desde 2025-06-18 10-25-44](https://github.com/user-attachments/assets/065a1b7e-2845-4194-a826-49650e367382)
+
+
 
 
 ## Características
