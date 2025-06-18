@@ -24,7 +24,7 @@ Este proyecto es una **aplicación web responsiva** que permite a los usuarios b
 
 1. **Clona este repositorio**:  
     ```bash
-    git clone https://github.com/JavMb/web-movil-api.git
+    git clone https://github.com/JavMB/SpainITJobFinder.git
     ```
 
 2. **Abre el archivo `index.html` en un navegador**.
